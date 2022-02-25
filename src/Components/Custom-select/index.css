@@ -1,0 +1,14 @@
+ .label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .select-option-wrapper {
+    display: flex;
+    align-items: center;
+  }
+  
+  .selected-option {
+    margin-right: 10px;
+  }
