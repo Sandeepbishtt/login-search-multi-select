@@ -8,10 +8,16 @@ const Home = () => {
   const [data, setData] = useState(colorOptions);
   const [selected, setSelected] = useState([]);
   const [checked, setChecked] = React.useState(true);
+  const [checkedMulti, setCheckedMulti] = React.useState(true);
 
   const handleChange = (event) => {
     setChecked(event.target.checked);
   };
+
+  const handleMultiSelect = (event) => {
+    setCheckedMulti(event.target.checked)
+  }
+
 
   const changeOptionsData = () => {
     setData((prev) =>
@@ -32,12 +38,20 @@ const Home = () => {
           onChange={handleChange}
           inputProps={{ "aria-label": "controlled" }}
         />
+        <p className="selected-option">Multi-Select </p>
+        <Checkbox
+       
+          checked={checkedMulti}
+          onChange={handleMultiSelect}
+          inputProps={{ "aria-label": "controlled" }}
+        />
       </div>
       <CustomSelect
         options={data}
         selected={selected}
         selectedVal={setSelected}
         checked={checked}
+        multiChecked = {checkedMulti}
       />
       {selected.length > 0 && (
         <div style={{ marginTop: "18rem" }}>

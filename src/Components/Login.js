@@ -4,6 +4,7 @@ import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import { useNavigate } from "react-router-dom";
 import { ValidatorForm, TextValidator } from "react-material-ui-form-validator";
 
+
 const LoginPage = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -32,8 +33,8 @@ const LoginPage = () => {
     } else {
       setError(true);
     }
-  };
 
+  }
   return (
     <>
       <Grid style={{ marginTop: "6rem" }}>
@@ -84,10 +85,15 @@ const LoginPage = () => {
               Login
             </Button>
           </Paper>
-        </ValidatorForm>
-      </Grid>
+        </ValidatorForm> 
+      </Grid> 
     </>
   );
 };
 
+
 export default LoginPage;
+
+
+
+
