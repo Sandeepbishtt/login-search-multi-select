@@ -6,7 +6,6 @@ import { Button } from "@mui/material";
 
 const Home = () => {
   const [data, setData] = useState(colorOptions);
-  const [selected, setSelected] = useState([]);
   const [checked, setChecked] = React.useState(true);
   const [checkedMulti, setCheckedMulti] = React.useState(true);
 
@@ -48,21 +47,9 @@ const Home = () => {
       </div>
       <CustomSelect
         options={data}
-        selected={selected}
-        selectedVal={setSelected}
         checked={checked}
         multiChecked = {checkedMulti}
       />
-      {selected.length > 0 && (
-        <div style={{ marginTop: "18rem" }}>
-          <Button type="button" color="primary" variant="outlined">
-            Clear
-          </Button>
-          <Button type="button" color="secondary" variant="outlined">
-            Submit
-          </Button>
-        </div>
-      )}
     </div>
   );
 };
